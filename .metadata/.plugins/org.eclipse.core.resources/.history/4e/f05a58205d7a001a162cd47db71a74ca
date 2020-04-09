@@ -1,0 +1,24 @@
+package es.pildoras.IOC;
+
+/**
+ * 
+ * @author oscar
+ *
+ */
+public class UsoEmpleados {
+	/**
+	 * Método main
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		//Creación de objetos de tipo Empleado
+//		JefeEmpleado empleadps1 = new JefeEmpleado();
+		JefeEmpleado empleadps1 = new SecretarioEmpleado();
+		
+		//Uso de los objetos creados
+		System.out.println(empleadps1.getTareas());
+		
+	}
+
+}

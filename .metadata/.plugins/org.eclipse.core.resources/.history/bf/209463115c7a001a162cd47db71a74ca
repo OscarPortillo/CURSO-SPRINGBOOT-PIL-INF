@@ -1,0 +1,15 @@
+package es.pildoras.IOC;
+
+public class UsoEmpleados {
+
+	public static void main(String[] args) {
+		
+		//Creación de objetos de tipo Empleado
+		JefeEmpleado empleadps1 = new JefeEmpleado();
+		
+		
+		//Uso de los objetos creados
+
+	}
+
+}

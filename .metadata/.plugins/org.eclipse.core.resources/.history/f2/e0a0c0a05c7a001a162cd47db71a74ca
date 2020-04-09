@@ -1,0 +1,12 @@
+package es.pildoras.IOC;
+/**
+ * 
+ * @author oscar
+ *
+ */
+public class JefeEmpleado implements Empleados{
+
+	public String getTareas() {//eL triangulo indica que se está sobreescribiendo el método de la interfaz
+		return "Gestion las cuestiones relativas a mis empleados de sección";
+	}
+}

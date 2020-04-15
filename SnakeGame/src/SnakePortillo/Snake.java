@@ -3,6 +3,8 @@ package SnakePortillo;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import Constants.*;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -15,37 +17,35 @@ import java.awt.Point;
 
 public class Snake extends JFrame{
 
-	int height = 640;
-	int width = 480;
+	//int height = 640;
+	//int width = 480;
 
 	Point snake;
 	Point comida;
 
-	boolean gameOver = false;
+	//boolean gameOver = false;
 
 	ArrayList<Point> lista;
-	int heightPoint = 10;
-	int widthPoint = 10;
 
-	int  direccion = KeyEvent.VK_LEFT;
-
-	long frecuencia = 50;
+//	int  direccion = KeyEvent.VK_LEFT;
+//
+//	long frecuencia = 50;
 
 	ImagenSnake imagenSanke;
 	public Snake() {
-		setTitle("juego de la MASACUATA");
+		setTitle("Snake GAME");
 
-		setSize(width, height);
+		setSize(Constants.height, Constants.height);
 
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-		this.setLocation(dim.width/2-width/2, dim.height/2-height/2);
+		this.setLocation(dim.width/2-Constants.width/2, dim.height/2-Constants.height/2);
 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		Teclas teclas = new Teclas();
 		this.addKeyListener(teclas);
 
-		snake = new Point(width/2, height/2);
+		snake = new Point(Constants.width/2, Constants.height/2);
 
 		startGame();
 
@@ -62,7 +62,7 @@ public class Snake extends JFrame{
 
 	public void startGame() {
 		comida = new Point(200, 200);
-		snake = new Point(width/2, height/2);
+		snake = new Point(Constants.width/2, Constants.height/2);
 
 		lista = new ArrayList<Point>();
 		lista.add(snake);
@@ -72,32 +72,23 @@ public class Snake extends JFrame{
 	public void crearComida() {
 		Random rnd = new Random();
 
-		comida.x = rnd.nextInt(width);
+		comida.x = rnd.nextInt(Constants.width);
 
-		System.out.println("*********");
 		if((comida.x % 5) > 0) {
-			System.out.println("x antes "+comida.x);
 			comida.x = comida.x - (comida.x % 5);// será un valor multiplo de 5
-			System.out.println("x después "+comida.x);
 		}
 
 		if(comida.x < 5 ) {
-			System.out.println("Valor x de antes "+comida.x);
 			comida.x = comida.x + 10;
-			System.out.println("Valor x de despues "+comida.x);
 		}
-		comida.y = rnd.nextInt(height);
+		comida.y = rnd.nextInt(Constants.height);
 
 		if((comida.y % 5) > 0) {
-			System.out.println("y antes "+comida.y);
 			comida.y = comida.y - (comida.y % 5);// será un valor multiplo de 5
-			System.out.println("y después "+comida.y);
 		}
 
 		if(comida.y < 5 ) {
-			System.out.println("Valor y de antes "+comida.y);
 			comida.y = comida.y + 10;
-			System.out.println("Valor y de despues "+comida.y);
 		}
 	}
 	public static void main(String[] args) {
@@ -113,7 +104,7 @@ public class Snake extends JFrame{
 		for(int i = 1; i < lista.size(); i++ ) {
 			Point punto = lista.get(i);
 			if(snake.x == punto.x && snake.y == punto.y) {
-				gameOver = true;
+				Constants.gameOver = true;
 			}
 		}
 
@@ -128,17 +119,17 @@ public class Snake extends JFrame{
 		public void paintComponent(Graphics g) {
 			super.paintComponent(g);
 			g.setColor(new Color(0, 0, 255));
-			g.fillRect(snake.x,  snake.y, widthPoint, heightPoint);//el rectangulo relleno
+			g.fillRect(snake.x,  snake.y, Constants.widthPoint, Constants.heightPoint);//el rectangulo relleno
 			for(int i = 0; i < lista.size(); i++) {
 				Point point = lista.get(i);
-				g.fillRect(point.x,  point.y, widthPoint, heightPoint);//el rectangulo relleno
+				g.fillRect(point.x,  point.y, Constants.widthPoint, Constants.heightPoint);//el rectangulo relleno
 			}
 
 			g.setColor(new Color(255, 0, 0));
-			g.fillRect(comida.x,  comida.y, widthPoint, heightPoint);//el rectangulo relleno
+			g.fillRect(comida.x,  comida.y, Constants.widthPoint, Constants.heightPoint);//el rectangulo relleno
 			
-			if(gameOver) {
-				g.drawString("Perdiste por puto", 200, 320);
+			if(Constants.gameOver) {
+				g.drawString("You lose", 200, 320);
 			}
 			
 		}
@@ -149,20 +140,20 @@ public class Snake extends JFrame{
 			if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
 				System.exit(0);
 			} else if(e.getKeyCode() == KeyEvent.VK_UP) {
-				if(direccion != KeyEvent.VK_DOWN) {
-					direccion = KeyEvent.VK_UP;
+				if(Constants.direccion != KeyEvent.VK_DOWN) {
+					Constants.direccion = KeyEvent.VK_UP;
 				}
 			} else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
-				if(direccion != KeyEvent.VK_UP) {
-					direccion = KeyEvent.VK_DOWN;
+				if(Constants.direccion != KeyEvent.VK_UP) {
+					Constants.direccion = KeyEvent.VK_DOWN;
 				}
 			} else if(e.getKeyCode() == KeyEvent.VK_LEFT) {
-				if(direccion != KeyEvent.VK_RIGHT) {
-					direccion = KeyEvent.VK_LEFT;
+				if(Constants.direccion != KeyEvent.VK_RIGHT) {
+					Constants.direccion = KeyEvent.VK_LEFT;
 				}
 			} else if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
-				if(direccion != KeyEvent.VK_LEFT) {
-					direccion = KeyEvent.VK_RIGHT;
+				if(Constants.direccion != KeyEvent.VK_LEFT) {
+					Constants.direccion = KeyEvent.VK_RIGHT;
 				}
 			}
 		}
@@ -173,44 +164,44 @@ public class Snake extends JFrame{
 		long last = 0;
 		public void run() {
 			while(true) {
-				if((java.lang.System.currentTimeMillis() - last) > frecuencia) {
-					if(!gameOver) {
-						if(direccion == KeyEvent.VK_UP) {
-							snake.y = snake.y - heightPoint;
-							if (snake.y > height) {
+				if((java.lang.System.currentTimeMillis() - last) > Constants.frecuencia) {
+					if(!Constants.gameOver) {
+						if(Constants.direccion == KeyEvent.VK_UP) {
+							snake.y = snake.y - Constants.heightPoint;
+							if (snake.y > Constants.height) {
 								snake.y = 0;
 							}
 
 							if(snake.y < 0) {
-								snake.y = height - heightPoint;
+								snake.y = Constants.height - Constants.heightPoint;
 							}
 
-						} else if(direccion == KeyEvent.VK_DOWN) {
-							snake.y = snake.y + heightPoint;
-							if (snake.y > height) {
+						} else if(Constants.direccion == KeyEvent.VK_DOWN) {
+							snake.y = snake.y + Constants.heightPoint;
+							if (snake.y > Constants.height) {
 								snake.y = 0;
 							}
 							if(snake.y < 0) {
-								snake.y = height - heightPoint;
+								snake.y = Constants.height - Constants.heightPoint;
 							}
 
-						} else if(direccion == KeyEvent.VK_LEFT) {
-							snake.x = snake.x - widthPoint;
-							if (snake.x > height) {
+						} else if(Constants.direccion == KeyEvent.VK_LEFT) {
+							snake.x = snake.x - Constants.widthPoint;
+							if (snake.x > Constants.height) {
 								snake.x = 0;
 							}
 
 							if(snake.x < 0) {
-								snake.x = width - widthPoint;
+								snake.x = Constants.width - Constants.widthPoint;
 							}
 
-						} else if(direccion == KeyEvent.VK_RIGHT) {
-							snake.x = snake.x + widthPoint;
-							if (snake.x > height) {
+						} else if(Constants.direccion == KeyEvent.VK_RIGHT) {
+							snake.x = snake.x + Constants.widthPoint;
+							if (snake.x > Constants.height) {
 								snake.x = 0;
 							}
 							if(snake.x < 0) {
-								snake.x = width - widthPoint;
+								snake.x = Constants.width - Constants.widthPoint;
 							}
 
 						}

@@ -4,7 +4,11 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://www.springframework.org/schema/beans">
-	<bean id="miEmpleado" class="es.pildoras.IOC.DirectorEmpleado">
-		
+	
+	<!-- Creación de la dependencia -->
+	<bean id="miInforme" class="es.pildoras.IOC.Informe"></bean>
+	
+	<bean id="miEmpleado" class="es.pildoras.IOC.JefeEmpleado">
+		<constructor-arg ref="miInforme"></constructor-arg>
 	</bean>
 </beans>

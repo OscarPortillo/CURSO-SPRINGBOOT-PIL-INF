@@ -10,4 +10,6 @@ public interface Empleados {
 	 * @return
 	 */
 	public String getTareas();
+	
+	public String getInforme();
 }

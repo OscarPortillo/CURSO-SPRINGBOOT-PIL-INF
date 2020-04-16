@@ -25,7 +25,7 @@ public class Snake extends JFrame{
 	 * Método constructor
 	 */
 	public Snake() {
-		setTitle("Snake GAME");
+		setTitle(Constants.tittle);
 
 		setSize(Constants.height, Constants.height);
 

@@ -30,4 +30,6 @@ public class Constants {
 	
 	public static ArrayList<Point> lista;
 	public static ImagenSnake imagenSanke;
+	public final static String CADENA_VACIA = "";
+	public final static String tittle = CADENA_VACIA;
 }

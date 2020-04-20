@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="es.pildoras.IOC.JefeEmpleado"/>
-<fullyQualifiedTypeName name="es.pildoras.IOC.Empleados"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="com.sun.glass.events.KeyEvent"/>
 <fullyQualifiedTypeName name="SnakePortillo.Teclas"/>
 <fullyQualifiedTypeName name="com.sun.prism.Graphics"/>
@@ -23,5 +21,13 @@
 <fullyQualifiedTypeName name="java.awt.Point"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator"/>
+<fullyQualifiedTypeName name="Constants.Constants"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="es.pildoras.IOC.Empleados"/>
+<fullyQualifiedTypeName name="es.pildoras.IOC.CreacionInformes"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="Hijo"/>
+<fullyQualifiedTypeName name="Persona"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

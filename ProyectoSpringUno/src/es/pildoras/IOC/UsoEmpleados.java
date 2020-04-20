@@ -24,7 +24,7 @@ public class UsoEmpleados {
 //		System.out.println(empleados2.getTareas());
 //		System.out.println(empleados3.getTareas());
 		
-		
+		/*
 		//Video Ocho
 		//primer paso: crear el contexto
 		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -42,8 +42,15 @@ public class UsoEmpleados {
 			Simplemente hayq ue ir al archivo xml y decirle el tipo que se desea devolver
 			*/
 		
-		//Video Nueve
+		//Video Nueve*/
 		
+		/**
+		 * Video 10 - Inyección de dependencias
+		 */
+		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
+		Empleados oscar = contexto.getBean("miSecretarioEmpleado", Empleados.class);
+		System.out.println(oscar.getTareas());
+		System.out.println(oscar.getInforme());
 	}
 
 }

@@ -45,12 +45,38 @@ public class UsoEmpleados {
 		//Video Nueve*/
 		
 		/**
-		 * Video 10 - Inyección de dependencias
+		 * Video 10 - Inyección de dependencias 2
 		 */
+//		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
+//		Empleados oscar = contexto.getBean("miSecretarioEmpleado", Empleados.class);
+//		System.out.println(oscar.getTareas());
+//		System.out.println(oscar.getInforme());
+//		contexto.close();
+		/**
+		 * Video 11 - Inyección de dependencias 3
+		 */
+//		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
+//		
+//		SecretarioEmpleado oscar = contexto.getBean("miSecretarioEmpleado", SecretarioEmpleado.class);
+//		SecretarioEmpleado leo = contexto.getBean("miSecretarioEmpleado", SecretarioEmpleado.class);
+//		
+//		System.out.println(oscar.getTareas());
+//		System.out.println(oscar.getInforme());
+//		System.out.println("Email Oscar: "+oscar.getEmail());
+//		System.out.println("Empresa Oscar: "+oscar.getNombreEmpresa());
+//		
+//		System.out.println("Email Leo: "+leo.getEmail());
+//		System.out.println("Empresa Leo: "+leo.getNombreEmpresa());
+//		contexto.close();
+		
 		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Empleados oscar = contexto.getBean("miSecretarioEmpleado", Empleados.class);
+		DirectorEmpleado oscar = contexto.getBean("miEmpleado", DirectorEmpleado.class);
 		System.out.println(oscar.getTareas());
+
 		System.out.println(oscar.getInforme());
+		System.out.println(oscar.getEmail());
+		System.out.println(oscar.getNombreEmpresa());
+		contexto.close();
 	}
 
 }

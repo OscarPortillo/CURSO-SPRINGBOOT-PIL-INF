@@ -8,13 +8,19 @@
 	<!-- Creación de la dependencia -->
 	<bean id="miInforme" class="es.pildoras.IOC.Informe"></bean>
 	
-	<bean id="miEmpleado" class="es.pildoras.IOC.JefeEmpleado">
+	<bean id="miEmpleado" class="es.pildoras.IOC.DirectorEmpleado">
 		<constructor-arg ref="miInforme"></constructor-arg>
+		<!-- Video 11 - Inmyección de dependencias 3 -->
+		<property name="email" value="equipo_directivo@oscar.es"></property>
+		<property name="nombreEmpresa" value="Empresas Portillo"></property>
 	</bean>
 	
 	<!-- Inyección de dependencias con un setter -->
 	<bean id="miSecretarioEmpleado" class="es.pildoras.IOC.SecretarioEmpleado">
 		<property name="informeNuevo" ref="miInforme"></property><!-- El name debe ser el método set pero sin el set y con la primera letra minúscula -->
+		<!-- Video 11 - Inmyección de dependencias 3 -->
+		<property name="email" value="equipo_directivo@oscar.es"></property>
+		<property name="nombreEmpresa" value="Empresas Portillo"></property>
 	</bean>
 	
 </beans>

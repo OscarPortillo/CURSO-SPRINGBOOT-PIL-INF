@@ -22,4 +22,24 @@ public class DirectorEmpleado implements Empleados {
 		// TODO Auto-generated method stub
 		return "Informe creado por el director: "+informeNuevo.getInforme();
 	}
+	
+	/**
+	 * Video 11 - Inyección de dependencias 3
+	 */
+	private String email;
+
+	private String nombreEmpresa;
+
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getNombreEmpresa() {
+		return nombreEmpresa;
+	}
+	public void setNombreEmpresa(String nombreEmpresa) {
+		this.nombreEmpresa = nombreEmpresa;
+	}
 }

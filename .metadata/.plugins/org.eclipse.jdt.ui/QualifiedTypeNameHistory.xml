@@ -24,10 +24,12 @@
 <fullyQualifiedTypeName name="Constants.Constants"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="es.pildoras.IOC.Empleados"/>
 <fullyQualifiedTypeName name="es.pildoras.IOC.CreacionInformes"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="Hijo"/>
 <fullyQualifiedTypeName name="Persona"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="es.pildoras.IOC.Empleados"/>
+<fullyQualifiedTypeName name="es.pildoras.IOC.SecretarioEmpleado"/>
+<fullyQualifiedTypeName name="es.pildoras.IOC.DirectorEmpleado"/>
 </qualifiedTypeNameHistroy>

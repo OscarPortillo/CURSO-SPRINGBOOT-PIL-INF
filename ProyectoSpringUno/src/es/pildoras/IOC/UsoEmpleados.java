@@ -69,6 +69,16 @@ public class UsoEmpleados {
 //		System.out.println("Empresa Leo: "+leo.getNombreEmpresa());
 //		contexto.close();
 		
+		/*ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
+		DirectorEmpleado oscar = contexto.getBean("miEmpleado", DirectorEmpleado.class);
+		System.out.println(oscar.getTareas());
+
+		System.out.println(oscar.getInforme());
+		System.out.println(oscar.getEmail());
+		System.out.println(oscar.getNombreEmpresa());
+		contexto.close();*/
+		
+		//Curso Spring. Inyección de dependencias IV. Vídeo 12 desde archivo externo.
 		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
 		DirectorEmpleado oscar = contexto.getBean("miEmpleado", DirectorEmpleado.class);
 		System.out.println(oscar.getTareas());

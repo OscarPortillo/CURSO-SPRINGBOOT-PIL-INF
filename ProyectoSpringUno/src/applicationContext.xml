@@ -5,14 +5,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://www.springframework.org/schema/beans">
 	
+	<!-- Curso Spring. Inyección de dependencias IV. Vídeo 12 -->
+	<context:property-placeholder location="classpath:datosEmpresa.propiedades"/>
+	<!-- Curso Spring. Inyección de dependencias IV. Vídeo 12 -->
+	
 	<!-- Creación de la dependencia -->
 	<bean id="miInforme" class="es.pildoras.IOC.Informe"></bean>
 	
 	<bean id="miEmpleado" class="es.pildoras.IOC.DirectorEmpleado">
 		<constructor-arg ref="miInforme"></constructor-arg>
 		<!-- Video 11 - Inmyección de dependencias 3 -->
-		<property name="email" value="equipo_directivo@oscar.es"></property>
-		<property name="nombreEmpresa" value="Empresas Portillo"></property>
+		<property name="email" value="${email}"></property>
+		<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
 	</bean>
 	
 	<!-- Inyección de dependencias con un setter -->

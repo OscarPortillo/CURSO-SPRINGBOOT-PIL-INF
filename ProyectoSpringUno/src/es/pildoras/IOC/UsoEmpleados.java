@@ -79,14 +79,19 @@ public class UsoEmpleados {
 		contexto.close();*/
 		
 		//Curso Spring. Inyección de dependencias IV. Vídeo 12 desde archivo externo.
-		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
+		/*ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
 		DirectorEmpleado oscar = contexto.getBean("miEmpleado", DirectorEmpleado.class);
 		System.out.println(oscar.getTareas());
 
 		System.out.println(oscar.getInforme());
 		System.out.println(oscar.getEmail());
 		System.out.println(oscar.getNombreEmpresa());
-		contexto.close();
+		contexto.close();*/
+		
+		/*
+		 * Curso Spring. Singleton y Prototype. Vídeo 13
+		 */
+		
 	}
 
 }

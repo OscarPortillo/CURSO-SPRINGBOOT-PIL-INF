@@ -39,38 +39,44 @@ public class main {
 			System.out.println(hijos.toString());
 		}*/
 		double acumulado;
-	    double interes= 0.10;
-	    double [] [] saldo  = new double [6] [5];
-	    for (int i = 0; i < saldo.length; i++) {
-	        saldo [i] [0] = 10000;
-	        acumulado = 10000;
-	        for (int j = 1; j < saldo.length-1 ; j++) {
-	            acumulado = acumulado + (acumulado * interes);
-	            saldo [i] [j] = acumulado;
-	        }
-	        interes = interes+ 0.01;
+		double interes= 0.10;
+		double [] [] saldo  = new double [6] [5];
+		for (int i = 0; i < saldo.length; i++) {
+			saldo [i] [0] = 10000;
+			acumulado = 10000;
+			for (int j = 1; j < saldo.length-1 ; j++) {
+				acumulado = acumulado + (acumulado * interes);
+				saldo [i] [j] = acumulado;
+			}
+			interes = interes+ 0.01;
+		}
+		for (int i = 0; i < saldo.length; i++) {
+			if (i != 0 ) {
+				System.out.println();
+			}
+			for (int j = 0; j < saldo.length - 1; j++) {
+				System.out.printf("%1.2f" ,saldo [i] [j]);
+				System.out.print(" ");
+			}
+		}
+		ArrayList<Integer> lista = new ArrayList<Integer>();
+		lista.add(-5);
+		lista.add(7);
+		lista.add(9);
+		lista.add(1);
+		ArrayList<Integer> listaAux = new ArrayList<Integer>();
+		listaAux.add(-4);
+		listaAux.add(3);
+		listaAux.add(8);
+		System.out.println(lista);// la lista irginal con los sus campos originales - 5, 7, 9, 1
+		System.out.println(listaAux);// la lista axiliar con sus campos originales
+		lista = new ArrayList<Integer>(listaAux);// copiamos la lista auxiliar en la original
+		System.out.println(lista);//lista original con los campos de la lista axiliar  - 4, 3, 8
+
+
+	    for (int i = 2; i <= 20;i+=3) {/*para que salgan los numeros en otra orden*/
+	    	System.out.println(i);
 	    }
-	    for (int i = 0; i < saldo.length; i++) {
-	     if (i != 0 ) {
-	         System.out.println();
-	    }
-	        for (int j = 0; j < saldo.length - 1; j++) {
-	            System.out.printf("%1.2f" ,saldo [i] [j]);
-	              System.out.print(" ");
-	        }
-	    }
-	    ArrayList<Integer> lista = new ArrayList<Integer>();
-	    lista.add(-5);
-	    lista.add(7);
-	    lista.add(9);
-	    lista.add(1);
-	    ArrayList<Integer> listaAux = new ArrayList<Integer>();
-	    listaAux.add(-4);
-	    listaAux.add(3);
-	    listaAux.add(8);
-	    System.out.println(lista);// la lista irginal con los sus campos originales - 5, 7, 9, 1
-	    System.out.println(listaAux);// la lista axiliar con sus campos originales
-	    lista = new ArrayList<Integer>(listaAux);// copiamos la lista auxiliar en la original
-	    System.out.println(lista);//lista original con los campos de la lista axiliar  - 4, 3, 8
 	}
+	
 }

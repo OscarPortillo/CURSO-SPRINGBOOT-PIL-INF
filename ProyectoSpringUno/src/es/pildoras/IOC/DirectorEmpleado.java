@@ -42,4 +42,20 @@ public class DirectorEmpleado implements Empleados {
 	public void setNombreEmpresa(String nombreEmpresa) {
 		this.nombreEmpresa = nombreEmpresa;
 	}
+	/*
+	 * Curso Spring. Ciclo de vida del Bean. Vídeo 14
+	 */
+	/**
+	 * Método init
+	 * Ejecutar tareas antes de que el bean esté disponible
+	 */
+	public void metodoInicial() {
+		System.out.println("Dentro del método Init. Aquí irían las tareas a ejecutar antes de que el Bean esté listo.");
+	}
+	/**
+	 * Método destroy: Encargado de ejecutar tareas después de que el bean sea utilizado.
+	 */
+	public void metodoFinal() {
+		System.out.println("Dentro del método Destroy. Aquí irían las tareas a ejecutar después de utilizar el Bean.");
+	}
 }
